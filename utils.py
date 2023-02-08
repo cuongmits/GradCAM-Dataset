@@ -38,7 +38,7 @@ class ImageDataset(Dataset):
 
         row = self.df.iloc[idx]
 
-        img_path = self.data_dir + row.img_path
+        img_path = self.data_dir + '/' + row.img_path
         img = cv2.imread(img_path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
